@@ -1,0 +1,233 @@
+@charset "UTF-8";
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+}
+.container-flex{
+    width: 80%;
+    height: 100%;
+    border-top: 10px solid #7A0002;
+	align-items: flex-start;
+    display: flex;
+    box-sizing: border-box;
+	margin: 0 auto;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.header{
+	height: 150px;
+	width: 100%;
+	display: 1;
+	background-color: #7A0002;
+	flex-direction: column;
+	border-bottom: 10px solid #7A0002;
+}
+.main-area{
+	flex-grow:1;
+	display: flex;
+	flex-direction: column;
+}
+.content{
+    flex-grow: 1;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+	position: relative;
+	display: block;
+}
+.overlay-info{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	max-width: 600px;
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.85); /* 白背景で透明度85% */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* 影をつけて浮き上がらせる */
+    text-align: center; /* テキストを中央寄せ */
+    z-index: 10; /* 画像より手前に表示 */
+}
+.overlay-info h3 {
+    margin-top: 0;
+    color: #7A0002; /* ヘッダーの色をブランドカラーに */
+    font-family: "Hiragino Mincho ProN", serif;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #C94B4D;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.overlay-info p {
+    color: #333;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.overlay-info .small-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+}
+.scrollable-image {
+    width: 100%; 
+    height: 100%;
+    display: block;
+}
+#one{
+	width: 24%;
+	height: 150px;
+    background-color: #C94B4D;
+	display: flex;
+}
+#two{
+	width:100%;
+	height: 150px;
+	display: flex;
+}
+.middle{
+	display: flex;
+	width: 100%;
+}
+.sidebar{
+	width: 15%;
+	min-width: 125px;
+	background-color: white;
+	height: 100%;
+	flex-shrink:0;
+	display:flex;
+	flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    /* 上下に少し余白を入れる */
+    padding-top: 20px;
+    padding-bottom: 20px;
+	
+	position: sticky;
+	top: 0;
+}
+.sidebar img {
+    width: 100%;
+    height: auto;
+}
+.sidebar-link{
+	display: block;
+	width:90%;
+	transition: opacity 0.3s;
+}
+.sidebar-link:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+.menu-list-container {
+    padding: 20px 40px; 
+    background-color: #fff;
+	border-left: 1px solid #7A0002;
+}
+.menu-row {
+    display: flex;             
+    justify-content: space-between; /* 文字と写真を左右両端に離す */
+    align-items: center;       /* 上下中央揃え */
+    border-bottom: 1px solid #ddd; /* 下線で区切る */
+    padding: 20px 0;           /* 行ごとの余白 */
+    font-family: "Hiragino Mincho ProN";
+}
+.menu-row:last-child {
+	border-bottom: none;
+}
+.menu-list-container h2{
+	border-bottom: 2px solid #7A0002;
+	font-family: "Hiragino Mincho ProN";
+	color: #7A0002;
+}
+.menu-list-container h4{
+	font-family: "Hiragino Mincho ProN";
+	color:black;
+	margin-top:0;
+	margin-bottom:0;
+}
+.menu-info {
+    flex: 1;             /* 余っている幅を全部使う */
+    padding-right: 20px; /* 写真との間に隙間を空ける */
+	min-width: 200px;
+}
+.menu-header {
+    display: flex;
+    align-items: baseline; /* 文字のベースラインを揃える */
+    gap: 15px;             /* 名前と価格の間隔 */
+    margin-bottom: 10px;
+	flex-wrap: wrap; /* 幅が足りないときは価格を自然に次の行へ落とす */
+}
+.menu-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+	color:saddlebrown;
+}
+.menu-header .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+.menu-header .price2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+	margin-left: auto;
+}
+.gram {
+    font-size: 1rem;       /* 金額より少し小さくする */
+    color: #666;           
+    font-weight: normal;
+    margin-left: auto;     
+}
+.drink-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    font-family: "Hiragino Mincho ProN";
+    flex-direction: row-reverse; 
+}
+.drink-row .menu-info {
+    padding-left: 20px; /* 画像との間に隙間を空ける */
+    padding-right: 0;
+}
+.menu-row:last-child {
+	border-bottom: none;
+}
+.drink-row:last-child { 
+    border-bottom: none;
+}
+.desc {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6; /* 行間を広げる */
+}
+
+/* 右側の写真エリア */
+.menu-image img {
+    width: 250px;       /* 写真の幅を固定 */
+    height: 200px;      /* 写真の高さを固定 */
+    object-fit: cover;  /* 形が崩れないようにトリミング */
+    border-radius: 8px; /* 角を少し丸くする */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	display: block;
+}
+.wine-list {
+    list-style: none; /* デフォルトの黒丸マーカーを非表示にする */
+    margin: 0;        /* 上下のデフォルトマージンをリセット */
+    padding: 0;       /* 左のデフォルトパディングをリセット */
+}
+
+.wine-list li {
+    font-family: "Hiragino Mincho ProN"; 
+    color: black;
+    margin-bottom: 10px; /* 各項目間の間隔を調整（任意） */
+}
+.wine-list li::before {
+    content: "・ "; /* 項目名の前に中黒と半角スペースを挿入 */
+    font-weight: bold; 
+    color: #7A0002;
+}
