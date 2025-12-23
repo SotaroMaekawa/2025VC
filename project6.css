@@ -15,6 +15,14 @@ html, body {
 	margin: 0 auto;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+.container { 
+    max-width: 400px;        
+    margin: 50px auto;        
+    border: 1px solid #D4AF37;       
+    background-color: #111111;       
+    padding: 30px;                  
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); 
+}
 .header{
 	height: 150px;
 	width: 100%;
@@ -27,6 +35,12 @@ html, body {
 	flex-grow:1;
 	display: flex;
 	flex-direction: column;
+}
+.main-area1{
+	flex-grow:1;
+	display: flex;
+	flex-direction: column;
+    background-color:#000000;
 }
 .content{
     flex-grow: 1;
@@ -176,7 +190,7 @@ html, body {
 	margin-left: auto;
 }
 .gram {
-    font-size: 1rem;       /* 金額より少し小さくする */
+    font-size: 1rem;      
     color: #666;           
     font-weight: normal;
     margin-left: auto;     
@@ -190,7 +204,7 @@ html, body {
     flex-direction: row-reverse; 
 }
 .drink-row .menu-info {
-    padding-left: 20px; /* 画像との間に隙間を空ける */
+    padding-left: 20px;
     padding-right: 0;
 }
 .menu-row:last-child {
@@ -227,7 +241,76 @@ html, body {
     margin-bottom: 10px; /* 各項目間の間隔を調整（任意） */
 }
 .wine-list li::before {
-    content: "・ "; /* 項目名の前に中黒と半角スペースを挿入 */
+    content: "・ "; 
     font-weight: bold; 
     color: #7A0002;
+}
+/* --- Happy New Year デザイン追加 --- */
+
+.newyear-promo {
+    margin-top: 30px;      
+    text-align: center;     
+    padding: 20px 0;
+    border: 1px solid #D4AF37; 
+    border-radius: 8px;     
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Happy New Year の見出し */
+.gold-title {
+    font-family: "Hiragino Mincho ProN", serif; 
+    font-size: 2rem;       
+    color: #D4AF37;        
+    letter-spacing: 0.1em;  
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4); 
+}
+
+/* 本文テキスト */
+.gold-text {
+    font-family: "Hiragino Mincho ProN", serif;
+    color: #F8F1E0;        
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* 値段の強調 */
+.special-price {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #D4AF37;
+    font-weight: bold;
+    border-bottom: 1px solid #D4AF37;
+    display: inline-block; 
+    padding-bottom: 5px;
+}
+
+/* 説明文 */
+.gold-desc {
+    margin-top: 15px;
+    color: #ccc;           
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+/* --- メニュー上部の動画エリア --- */
+.menu-top-movie {
+    width: 80%;            
+    margin-bottom: 30px;   
+    overflow: hidden;      
+    border-radius: 8px;    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+    background-color: #000; 
+    line-height: 0;       
+    max-width: 600px;      
+    margin: 0 auto 30px auto; 
+}
+
+.menu-top-movie video,
+.menu-top-movie img {
+    width: 100%;          
+    height: auto;          
+    display: block;        
+    object-fit: cover;     
 }
